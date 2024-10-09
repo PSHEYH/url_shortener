@@ -45,7 +45,6 @@ export const createCustomUrl = async (
   const { url, password, custom_name: customName } = request.body;
   const shortUrl = `short.ly.${customName}`;
   let urlModel;
-  console.log(password);
 
   if (password !== undefined) {
     const hashPassword = await hash(password, await genSalt(10));
